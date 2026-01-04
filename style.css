@@ -22,3 +22,13 @@ a{
     color: #1a73e8;
     text-decoration: none;
 }
+.alertButton {
+    background-color: yellow;
+    color: black;
+    border: none;
+    text-decoration:none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
