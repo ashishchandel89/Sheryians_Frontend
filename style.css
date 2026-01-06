@@ -6,24 +6,24 @@ body{
 }
 h1{
     font-size: 36px;
-    color: red;
+    color: cyan;
     text-align: center;
     margin-bottom: 20px;
 
 }
 p{
     font-size: 16px;
-    color: green;
+    color: cyan;
     text-align: center;
     line-height: 1.5;
     margin-bottom: 15px;
 }
 a{
-    color: #1a73e8;
+    color: cyan;
     text-decoration: none;
 }
 .alertButton {
-    background-color: yellow;
+    background-color: cyan;
     color: black;
     border: none;
     text-decoration:none;
