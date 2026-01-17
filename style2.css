@@ -11,10 +11,16 @@ html, body {
     color:black
    
 }
+
+@font-face {
+    font-family: Ashish;
+    src: url(./Handmade\ Alphabet.otf);
+}
+
 h1 {
    font-size: 56px;
     text-align: center;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: 'Ashish', cursive;
    font-weight: 500;
    margin-top: 10px;
    margin-left: 300px;
