@@ -1,26 +1,145 @@
 *{
     margin:0;
-    height:0;
-    box-sizing:border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 html,body{
     width: 100%;
     height: 100%;
-    font-family: ;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.main{
-    width: 100%;
-    height: 100%;
-}
-.nav_div{
-    width: 100%;
-    display: flex;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    gap:20px;
-}
-.a1{
+main{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows:
+  100px 
+  200px 
+  400px
+   150px 
+   350px
+   250px 
+   350px 
+    350px 
+     350px 
+  350px
+  350px
+  350px
+  400px;
 
+  grid-template-areas:
+  "header header header header"
+  "section-left1 section-right2 section-right2 section-right2"
+  "img1 img1 img1 img1"
+  "article article article article"
+  "section-left3 section-left3 section-right3 section-right3"
+  "section-left4 section-left4 section-right4 section-right4"
+  "gallery1 gallery1 gallery1 gallery1"
+  "gallery2 gallery2 gallery2 gallery2"
+  "section-left5 section-left5 section-right5 section-right5"
+  "figure-left figure-left section-right6 section-right6"
+  "section-left6 section-left6 figure-right figure-right"
+  "section-left7 section-left7 section-right7 section-right7"
+  "footer footer footer footer";
+
+  gap:10px;
+  padding:10px;
+  background:black;
 }
+
+header{
+    grid-area:header;
+    background:pink;
+}
+.section-left1{
+    grid-area:section-left1;
+    background:pink;
+}
+.section-right2{
+    grid-area:section-right2;
+    background:pink;
+}
+.img1{
+    grid-area:img1;
+    background:pink;
+}
+article{
+    grid-area:article;
+    background:pink;
+}
+.section-left3{
+    grid-area:section-left3;
+    background:pink;
+}
+.section-right3{
+    grid-area:section-right3;
+    background:pink;
+}
+.section-left4{
+    grid-area:section-left4;
+    background:pink;
+}
+.section-right4{
+    grid-area:section-right4;
+    background:pink;
+}
+.gallery1{
+    grid-area:gallery1;
+    background:pink;
+    display:flex;
+    justify-content: space-around;
+    gap:10px;
+}
+.gallery2{
+    grid-area:gallery2;
+    background:pink;
+    display:flex;
+    justify-content: space-around;
+    gap:10px;
+}
+.shot{
+    width:280px;
+    padding: 10px;
+    margin: 20px;
+    height:300px;
+    background-color: white;
+}
+
+.section-left5{
+    grid-area:section-left5;
+    background:pink;
+}
+.section-right5{
+    grid-area:section-right5;
+    background:pink;
+}
+
+.figure-left{
+    grid-area:figure-left;
+    background:pink;}
+
+    .section-right6{
+    grid-area:section-right6;
+    background:pink;
+}
+
+.section-left6{
+    grid-area:section-left6;
+    background:pink;
+}
+.figure-right{
+    grid-area:figure-right;
+    background:pink;}
+
+   .section-left7{
+    grid-area:section-left7;
+    background:pink;
+}
+.section-right7{
+    grid-area:section-right7;
+    background:pink;
+} 
+footer{grid-area:footer;
+    background:pink;}
+
+
