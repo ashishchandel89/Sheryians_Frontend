@@ -32,7 +32,7 @@ body {
   font-family: myfont3;
   src: url("./63cffc0a3942456e003bc265_Chillax-Regular.woff");
 }
-section {
+.view1 {
   max-width: 2000px;
 }
 
@@ -43,7 +43,7 @@ main {
   gap: 0rem;
   align-items: center;
 }
-main section {
+main .view1 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -51,14 +51,14 @@ main section {
   background-color: rgb(21, 20, 20);
   border-radius: 1rem;
 }
-main section .top {
+main .view1 .top {
   width: 100%;
 }
-main section .top img {
+main .view1 .top img {
   width: 100%;
   border-radius: 1rem;
 }
-main section .bottom {
+main .view1 .bottom {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -66,29 +66,29 @@ main section .bottom {
   padding: 1.5rem;
   border-radius: 1rem;
 }
-main section .bottom p {
+main .view1 .bottom p {
   font-size: 0.8rem;
   font-family: myfont1;
 }
-main section .bottom .text {
+main .view1 .bottom .text {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
-main section .bottom .text h1 {
+main .view1 .bottom .text h1 {
   text-transform: uppercase;
   font-weight: 200;
   font-family: myfont3;
-  font-size: 2rem;
+  font-size: 3rem;
 }
-main section .bottom .text p {
+main .view1 .bottom .text p {
   font-size: 1.5rem;
   font-weight: 100;
   line-height: 1.5;
   opacity: 0.6;
   font-family: myfont2;
 }
-main section .bottom .text button {
+main .view1 .bottom .text button {
   width: -moz-fit-content;
   width: fit-content;
   border: none;
@@ -98,27 +98,28 @@ main section .bottom .text button {
 }
 
 @media (min-width: 900px) {
-  main section {
+  main .view1 {
     flex-direction: row;
     padding: 1rem 4rem;
     align-items: stretch;
   }
-  main section .top,
-  main section .bottom {
+  main .view1 .top,
+  main .view1 .bottom {
     width: 50%;
   }
-  main section .bottom {
+  main .view1 .bottom {
     justify-content: space-between;
-    padding: 3rem;
+    padding: 3.5rem;
   }
-  main section .bottom .text {
+  main .view1 .bottom .text {
     gap: 1.5rem;
   }
-  main section .bottom .text h1 {
-    font-size: 3.5rem;
+  main .view1 .bottom .text h1 {
+    width: 90%;
+    font-size: 3.8rem;
   }
-  main section .bottom .text p {
-    width: 60%;
-    font-size: 1.5rem;
+  main .view1 .bottom .text p {
+    width: 90%;
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=style.css.map */

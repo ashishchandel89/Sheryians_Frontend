@@ -34,14 +34,14 @@ body {
     font-family: myfont3;
     src: url('./63cffc0a3942456e003bc265_Chillax-Regular.woff');
 }
-section{
+.view1{
     max-width:2000px;
 }
 main{
     width: 100%;
     @include flex-center();
     align-items: center;
-    section{
+    .view1{
         width: 100%;
         @include flex-center(1rem);
         background-color: rgb(21, 20, 20);
@@ -70,7 +70,7 @@ main{
                     text-transform: uppercase;
                     font-weight: 200;
                     font-family: myfont3;
-                    font-size: 2rem;
+                    font-size: 3rem;
                 }
                 p{
                     font-size: 1.5rem;
@@ -93,7 +93,7 @@ main{
   @media (min-width:900px) {
     main{
         
-        section{
+        .view1{
             flex-direction: row;
             padding: 1rem 4rem;
             align-items: stretch; 
@@ -107,21 +107,23 @@ main{
 
             .bottom{
                 justify-content: space-between;
-                padding:3rem;
+                padding:3.5rem;
 
                 .text{
 
                     gap:1.5rem;
 
                     h1{
-                        font-size:3.5rem;
+                        width: 90%;
+                        font-size:3.8rem;
                     }
                      p {
-                        width: 60%;
-                        font-size: 1.5rem;
+                        width: 90%;
+                        font-size: 1.3rem;
                     }
                 }
             }
         }
     }
     }
+
