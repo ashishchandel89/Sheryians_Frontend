@@ -13,8 +13,9 @@ button1.addEventListener("click", function () {
 
     // show message at target
     if (counter === target) {
-        congratulation.innerHTML ="Congratulations! You've reached " + target + " clicks!";
+        congratulation.innerHTML ="🎉🙏 बधाई हो! आपने " + target + " नाम-जप पूरे कर लिए ✨🌸";
         congratulation.style.color = "white";
+         
         target += 108;   
     }
 
@@ -31,3 +32,5 @@ button2.addEventListener("click", function () {
     if (counter < 0) counter = 0;
     count.innerHTML = counter;
 });
+
+
