@@ -82,8 +82,32 @@
 
 // Que=6
 
-    function User(){         // Constructor without using class syntax
-        this.name="HARSH";
+    // function User(){         // Constructor without using class syntax
+    //     this.name="HARSH";
+    // }
+    // let u1=new User();
+    // console.log(u1);
+
+
+// Que=7
+
+class User{
+    constructor(name){
+        this.name=name;
+        User.prototype.login=function(){
+            console.log("Successfully Login!!!");
+        }
     }
-    let u1=new User();
-    console.log(u1);
+}
+let u1=new User("Ashish");
+
+
+class User2{
+    constructor(name){
+        this.name=name;
+    }
+    login(){
+        console.log("Successfully Login!!!");
+    }
+}
+let u2=new User("Manish");
