@@ -1,3 +1,6 @@
+
+// Que=1
+
 // class User{
 //     constructor(name,email){
 //         this.name=name;
@@ -15,14 +18,29 @@
 // let user5=new User("Kanishak","chandel98kanishak@gmail.com");
 
 
-let Product={
-    name:"Addidas",
-    price:3000,
-    discount: 500,
-    finalprice: function(){
-        return this.price-this.discount;
+// Que=2
+
+// let Product={
+//     name:"Addidas",
+//     price:3000,
+//     discount: 500,
+//     finalprice: function(){
+//         return this.price-this.discount;
+//     }
+// }
+// console.log(Product.finalprice());
+
+
+// Que=3
+
+class Car{
+    constructor(brand,speed){
+        this.brand=brand;
+        this.speed=speed;
+    }
+    drive(){
+        console.log(this.brand+ " "+this.speed)
     }
 }
-console.log(Product.finalprice());
-
-
+let car1=new Car("BMW",200);
+let car2=new Car("Creta",180);
