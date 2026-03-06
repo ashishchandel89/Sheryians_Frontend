@@ -91,23 +91,49 @@
 
 // Que=7
 
-class User{
-    constructor(name){
-        this.name=name;
-        User.prototype.login=function(){
-            console.log("Successfully Login!!!");
-        }
-    }
-}
-let u1=new User("Ashish");
+// class User{
+//     constructor(name){
+//         this.name=name;
+//         User.prototype.login=function(){
+//             console.log("Successfully Login!!!");
+//         }
+//     }
+// }
+// let u1=new User("Ashish");
 
 
-class User2{
-    constructor(name){
-        this.name=name;
-    }
-    login(){
-        console.log("Successfully Login!!!");
-    }
+// class User2{
+//     constructor(name){
+//         this.name=name;
+//     }
+//     login(){
+//         console.log("Successfully Login!!!");
+//     }
+// }
+// let u2=new User("Manish");
+
+
+Que=8
+
+function User(val){
+    this.name=val;
+    this.loginin=function(){
+    console.log("Logged In");
 }
-let u2=new User("Manish");
+}                                                          
+let user1=new User("Ashish");
+let user2=new User("Manish");                       // It returns false because har ek object ke pass alag alag fnction honge to unki is bhi different hogi
+
+
+
+
+function User2(val){
+    this.name=val;
+}
+ User.prototype.login=function(){
+    console.log("Logged In");
+}                                                          
+let user3=new User("Ashish");
+let user4=new User("Manish");                       // It returns true because ye shared functionuse kar rhe hai
+
+
