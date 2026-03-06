@@ -201,20 +201,38 @@
 
 // SECTION - 3
 
-class BankAccount{
-    constructor(accountHolderName,balance){
-        this.accountHolderName=accountHolderName;
-        this.balance=balance;
-    }
-    Deposit(amount){
-        console.log("Before Deposit: "+this.balance);
-        console.log("After Deposit: "+this.balance+"+"+amount+"="+(this.balance+=amount));
-    }
-}
-let account=new BankAccount("Ashish",1000);
-let account2=new BankAccount("Manish",3000);
-let amt=+(prompt("Enter Deposit amount: "))
-account.Deposit(amt);
+// class BankAccount{
+//     constructor(accountHolderName,balance){
+//         this.accountHolderName=accountHolderName;
+//         this.balance=balance;
+//     }
+//     Deposit(amount){
+//         console.log("Before Deposit: "+this.balance);
+//         console.log("After Deposit: "+this.balance+"+"+amount+"="+(this.balance+=amount));
+//     }
+// }
+// let account=new BankAccount("Ashish",1000);
+// let account2=new BankAccount("Manish",3000);
+// let amt=+(prompt("Enter Deposit amount: "))
+// account.Deposit(amt);
 
-console.log(account.balance);
-console.log(account2.balance);
+// console.log(account.balance);
+// console.log(account2.balance);
+
+
+// SECTION - 4
+
+let profile={
+    username: "the_ashish_chandel",
+    printName(){
+        console.log(this.username);
+    }
+    
+}
+profile.printName();
+
+let fnc=profile.printName;
+fnc();
+
+let fn2 = profile.printName.bind(profile);
+fn2();
