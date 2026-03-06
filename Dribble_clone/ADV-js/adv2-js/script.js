@@ -180,20 +180,41 @@
 
 //SECTION - 2
 
-class Employee{
-    constructor(name,salary){
-        this.name=name;
-        this.salary=salary;
+// class Employee{
+//     constructor(name,salary){
+//         this.name=name;
+//         this.salary=salary;
+//     }
+//     showDetails(){
+//         console.log(this.name);
+//         console.log(this.salary);
+//     }
+// }
+// let emp=new Employee("Ashish",100000);
+// let emp2=new Employee("Manish",120000);
+// let emp3 = new Employee("Rahul",90000);
+// emp.salary=900000;          //No, this does not effect other objects.
+// emp.showDetails();
+// emp2.showDetails();
+// emp3.showDetails();
+
+
+// SECTION - 3
+
+class BankAccount{
+    constructor(accountHolderName,balance){
+        this.accountHolderName=accountHolderName;
+        this.balance=balance;
     }
-    showDetails(){
-        console.log(this.name);
-        console.log(this.salary);
+    Deposit(amount){
+        console.log("Before Deposit: "+this.balance);
+        console.log("After Deposit: "+this.balance+"+"+amount+"="+(this.balance+=amount));
     }
 }
-let emp=new Employee("Ashish",100000);
-let emp2=new Employee("Manish",120000);
-let emp3 = new Employee("Rahul",90000);
-emp.salary=900000;          //No, this does not effect other objects.
-emp.showDetails();
-emp2.showDetails();
-emp3.showDetails();
+let account=new BankAccount("Ashish",1000);
+let account2=new BankAccount("Manish",3000);
+let amt=+(prompt("Enter Deposit amount: "))
+account.Deposit(amt);
+
+console.log(account.balance);
+console.log(account2.balance);
