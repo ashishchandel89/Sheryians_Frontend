@@ -70,3 +70,11 @@
 // }
 // let newfnc=speed.bind(obj1,[9,0,6,4,3,22,2]);
 // newfnc();
+
+let obj={
+    name:"Ashish Chandel",
+     show(){
+        console.log(this.name);
+    }
+}
+obj.show();
