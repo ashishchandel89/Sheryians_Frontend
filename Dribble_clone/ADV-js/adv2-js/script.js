@@ -222,17 +222,50 @@
 
 // SECTION - 4
 
-let profile={
-    username: "the_ashish_chandel",
-    printName(){
-        console.log(this.username);
-    }
+// let profile={
+//     username: "the_ashish_chandel",
+//     printName(){
+//         console.log(this.username);
+//     }
     
+// }
+// profile.printName();
+
+// let fnc=profile.printName;
+// fnc();
+
+// let fn2 = profile.printName.bind(profile);
+// fn2();
+
+
+// SECTION - 5
+
+function Vehicle(type,wheels){
+    this.type=type;
+    this.wheels=wheels;
 }
-profile.printName();
+    Vehicle.prototype.describe=function(){
+        console.log(this.type);
+        console.log(this.wheels);
+    }
+let v1=new Vehicle("Bike",2);
+let v2=new Vehicle("Car",4);
+let v3=new Vehicle("Truck",18);
+v1.describe();
+v2.describe();
+v3.describe();
 
-let fnc=profile.printName;
-fnc();
 
-let fn2 = profile.printName.bind(profile);
-fn2();
+
+function Vehicle2(type,wheels){
+    this.type=type;
+    this.wheels=wheels;
+    this.describe=function(){
+        console.log(this.type);
+        console.log(this.wheels);
+    }
+}
+
+let v11=new Vehicle("Bike",2);
+let v12=new Vehicle("Car",4);
+let v13=new Vehicle("Truck",18);
