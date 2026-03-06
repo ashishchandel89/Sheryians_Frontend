@@ -33,14 +33,36 @@
 
 // Que=3
 
-class Car{
-    constructor(brand,speed){
-        this.brand=brand;
-        this.speed=speed;
+// class Car{
+//     constructor(brand,speed){
+//         this.brand=brand;
+//         this.speed=speed;
+//     }
+//     drive(){
+//         console.log(this.brand+ " "+this.speed)
+//     }
+// }
+// let car1=new Car("BMW",200);
+// let car2=new Car("Creta",180);
+
+
+// Que=4
+
+class Student{
+    constructor(name,rollno){
+        this.name=name;
+        this.rollno=rollno;
     }
-    drive(){
-        console.log(this.brand+ " "+this.speed)
+    print(){
+        console.log(this.name);
+        console.log(this.rollno);
     }
 }
-let car1=new Car("BMW",200);
-let car2=new Car("Creta",180);
+let student1=new Student("Anshu",23098116780001);
+let student2=new Student("Ashish",23098116780002);
+let student3=new Student("Arshdeep",23098116780003);
+let student4=new Student("Aashu",23098116780004);
+student1.print();
+student2.print();
+student3.print();
+student4.print();
