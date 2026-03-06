@@ -113,27 +113,40 @@
 // let u2=new User("Manish");
 
 
-Que=8
+// Que=8
 
-function User(val){
-    this.name=val;
-    this.loginin=function(){
-    console.log("Logged In");
+// function User(val){
+//     this.name=val;
+//     this.loginin=function(){
+//     console.log("Logged In");
+// }
+// }                                                          
+// let user1=new User("Ashish");
+// let user2=new User("Manish");                       // It returns false because har ek object ke pass alag alag fnction honge to unki is bhi different hogi
+
+
+
+
+// function User2(val){
+//     this.name=val;
+// }
+//  User.prototype.login=function(){
+//     console.log("Logged In");
+// }                                                          
+// let user3=new User("Ashish");
+// let user4=new User("Manish");                       // It returns true because ye shared functionuse kar rhe hai
+
+
+
+// Que=9
+
+function printName(...arr){
+    console.log(this,...arr);
 }
-}                                                          
-let user1=new User("Ashish");
-let user2=new User("Manish");                       // It returns false because har ek object ke pass alag alag fnction honge to unki is bhi different hogi
-
-
-
-
-function User2(val){
-    this.name=val;
-}
- User.prototype.login=function(){
-    console.log("Logged In");
-}                                                          
-let user3=new User("Ashish");
-let user4=new User("Manish");                       // It returns true because ye shared functionuse kar rhe hai
-
-
+  let obj={
+    name:"Ashish",
+  }
+console.log(printName.call(obj));
+console.log(printName.apply(obj,[1,2,3,4,5,6,7]));
+let newfnc=printName.bind(obj,[90,89,67,45]);
+console.log(newfnc());
