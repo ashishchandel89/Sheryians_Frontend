@@ -240,32 +240,48 @@
 
 // SECTION - 5
 
-function Vehicle(type,wheels){
-    this.type=type;
-    this.wheels=wheels;
+// function Vehicle(type,wheels){
+//     this.type=type;
+//     this.wheels=wheels;
+// }
+//     Vehicle.prototype.describe=function(){
+//         console.log(this.type);
+//         console.log(this.wheels);
+//     }
+// let v1=new Vehicle("Bike",2);
+// let v2=new Vehicle("Car",4);
+// let v3=new Vehicle("Truck",18);
+// v1.describe();
+// v2.describe();
+// v3.describe();
+
+
+
+// function Vehicle2(type,wheels){
+//     this.type=type;
+//     this.wheels=wheels;
+//     this.describe=function(){
+//         console.log(this.type);
+//         console.log(this.wheels);
+//     }
+// }
+
+// let v11=new Vehicle("Bike",2);
+// let v12=new Vehicle("Car",4);
+// let v13=new Vehicle("Truck",18);
+
+
+// SECTION - 6
+
+obj={
+    brand:"Addidas"
 }
-    Vehicle.prototype.describe=function(){
-        console.log(this.type);
-        console.log(this.wheels);
-    }
-let v1=new Vehicle("Bike",2);
-let v2=new Vehicle("Car",4);
-let v3=new Vehicle("Truck",18);
-v1.describe();
-v2.describe();
-v3.describe();
-
-
-
-function Vehicle2(type,wheels){
-    this.type=type;
-    this.wheels=wheels;
-    this.describe=function(){
-        console.log(this.type);
-        console.log(this.wheels);
-    }
+obj2={
+    brand:"Nike"
 }
+function showBrand(){
+    console.log(this.brand);
+}
+showBrand.call(obj);
+showBrand.call(obj2);
 
-let v11=new Vehicle("Bike",2);
-let v12=new Vehicle("Car",4);
-let v13=new Vehicle("Truck",18);
