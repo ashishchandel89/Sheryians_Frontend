@@ -70,12 +70,20 @@
 
 // Que=5
 
-let obj={
-    simple_fnc:function(){
-        console.log(this);              // it returns object because it gained from its parent
-    },
+// let obj={
+//     simple_fnc:function(){
+//         console.log(this);              // it returns object because it gained from its parent
+//     },
 
-    arrow_fnc:()=>{
-        console.log(this);              // it returns window
+//     arrow_fnc:()=>{
+//         console.log(this);              // it returns window
+//     }
+// }
+
+// Que=6
+
+    function User(){         // Constructor without using class syntax
+        this.name="HARSH";
     }
-}
+    let u1=new User();
+    console.log(u1);
