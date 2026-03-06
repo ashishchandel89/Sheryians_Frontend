@@ -48,21 +48,34 @@
 
 // Que=4
 
-class Student{
-    constructor(name,rollno){
-        this.name=name;
-        this.rollno=rollno;
-    }
-    print(){
-        console.log(this.name);
-        console.log(this.rollno);
+// class Student{
+//     constructor(name,rollno){
+//         this.name=name;
+//         this.rollno=rollno;
+//     }
+//     print(){
+//         console.log(this.name);
+//         console.log(this.rollno);
+//     }
+// }
+// let student1=new Student("Anshu",23098116780001);
+// let student2=new Student("Ashish",23098116780002);
+// let student3=new Student("Arshdeep",23098116780003);
+// let student4=new Student("Aashu",23098116780004);
+// student1.print();
+// student2.print();
+// student3.print();
+// student4.print();
+
+
+// Que=5
+
+let obj={
+    simple_fnc:function(){
+        console.log(this);              // it returns object because it gained from its parent
+    },
+
+    arrow_fnc:()=>{
+        console.log(this);              // it returns window
     }
 }
-let student1=new Student("Anshu",23098116780001);
-let student2=new Student("Ashish",23098116780002);
-let student3=new Student("Arshdeep",23098116780003);
-let student4=new Student("Aashu",23098116780004);
-student1.print();
-student2.print();
-student3.print();
-student4.print();
