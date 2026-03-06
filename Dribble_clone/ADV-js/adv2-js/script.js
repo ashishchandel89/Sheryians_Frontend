@@ -140,13 +140,60 @@
 
 // Que=9
 
-function printName(...arr){
-    console.log(this,...arr);
+// function printName(...arr){
+//     console.log(this.name, ...arr);
+// }
+//   let obj={
+//     name:"Ashish",
+//   }
+// console.log(printName.call(obj));
+// console.log(printName.apply(obj,[1,2,3,4,5,6,7]));
+// let newfnc=printName.bind(obj,[90,89,67,45]);
+// console.log(newfnc());
+
+
+
+//================================PART - [B]=================================
+
+// SECTION - 1
+
+// class Laptop{
+//    constructor(brand,price){
+//         this.brand=brand;
+//         this.price=price;
+//    } 
+//     start(){
+//         console.log("Laptop-Started !!");
+//     }
+//     increase(){
+//         let inc_price=this.price+(this.price*10/100);
+//         return inc_price;
+//     }
+// }
+// let dell=new Laptop("DELL",50000);
+// console.log(dell);
+// let hp=new Laptop("HP",70000);
+// console.log(hp);
+// let asus=new Laptop("ASUS",90000);
+// console.log(asus);
+
+
+//SECTION - 2
+
+class Employee{
+    constructor(name,salary){
+        this.name=name;
+        this.salary=salary;
+    }
+    showDetails(){
+        console.log(this.name);
+        console.log(this.salary);
+    }
 }
-  let obj={
-    name:"Ashish",
-  }
-console.log(printName.call(obj));
-console.log(printName.apply(obj,[1,2,3,4,5,6,7]));
-let newfnc=printName.bind(obj,[90,89,67,45]);
-console.log(newfnc());
+let emp=new Employee("Ashish",100000);
+let emp2=new Employee("Manish",120000);
+let emp3 = new Employee("Rahul",90000);
+emp.salary=900000;          //No, this does not effect other objects.
+emp.showDetails();
+emp2.showDetails();
+emp3.showDetails();
