@@ -105,34 +105,70 @@
 
 //  Exercise :- 3
 
-function loginUser(func){
-    console.log("Login User Details.....");
-   setTimeout(()=>{
-        func({userid:1253,username:"the_ashish_chandel",follower:"120k"});
-   },1000);
-}
-function fetchPermissions(id,func2){
+// function loginUser(func){
+//     console.log("Login User Details.....");
+//    setTimeout(()=>{
+//         func({userid:1253,username:"the_ashish_chandel",follower:"120k"});
+//    },1000);
+// }
+// function fetchPermissions(id,func2){
     
-    console.log("Fetching Permissions.....");
+//     console.log("Fetching Permissions.....");
+//     setTimeout(()=>{
+//     console.log("Allow Permissions of userid: ",id);
+    
+//         func2(["Show all posts","Show all detials","Allow limited access"]);
+//     },1000)
+// }
+// function loadDashboard(per,func3){
+//     console.log("Loading Dashboard.....");
+//     setTimeout(() => {
+//         func3("Dashboard loaded");
+//     },1000);
+// }
+
+// loginUser(function(dets){
+//     console.log(dets);
+//     fetchPermissions(dets.userid,function(permission){
+//         console.log(permission);
+//             loadDashboard(permission,function(msg){
+//                 console.log(msg);
+//             });
+//     });
+// });
+
+
+// Exercise :- 4    (Order - System)
+
+function placeOrder(itemName,callback){
+    console.log("Placing Order.....");
     setTimeout(()=>{
-    console.log("Allow Permissions of userid: ",id);
+        console.log("Item: ",itemName);
+        callback({oderId:565,item:"Shoes"});
+    },1000);
     
-        func2(["Show all posts","Show all detials","Allow limited access"]);
-    },1000)
 }
-function loadDashboard(per,func3){
-    console.log("Loading Dashboard.....");
+function prepareOrder(id,callback){
+    console.log("Preparing Order.....");
     setTimeout(() => {
-        func3("Dashboard loaded");
+        console.log("Order Preparing of this OderId",id);
+        callback("Order Prepared");
+    },1000);
+}
+function deliverOrder(status,callback){
+    console.log("Delivering Order.....");
+     setTimeout(() => {
+        console.log("Your Order is: ",status);
+        callback("Order Delivered");
     },1000);
 }
 
-loginUser(function(dets){
-    console.log(dets);
-    fetchPermissions(dets.userid,function(permission){
-        console.log(permission);
-            loadDashboard(permission,function(msg){
-                console.log(msg);
-            });
-    });
+placeOrder("Nike",function(dets){
+    console.log("Order Placed with: ",dets);
+        prepareOrder(dets.oderId,function(msg){
+            console.log(msg);
+                deliverOrder(msg,function(msg1){
+                    console.log(msg1);
+                });
+        });
 });
