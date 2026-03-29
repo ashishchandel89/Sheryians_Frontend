@@ -71,32 +71,68 @@
 
 // Exercise :- 1
 
-function AfterDelay(time,func){
-    setTimeout(()=>{
-        func();
-    },time)
-}
-AfterDelay(500,function(){
-    console.log("CallBack Executed")
-});
+// function AfterDelay(time,func){
+//     setTimeout(()=>{
+//         func();
+//     },time)
+// }
+// AfterDelay(500,function(){
+//     console.log("CallBack Executed")
+// });
 
-// Exercise :- 2
+// // Exercise :- 2
 
-function GetUser(username,func){
-    console.log("Fetching User's details....")
-    setTimeout(()=>{
-        func({id:1145,username});
-    },1500);
-}
-function GetUserPosts(id,func2){
-    setTimeout(()=>{
-        func2(["Jai Maa Naina Devi","Jai Maa Chintpurni","Jai Maa Jawala Devui","Jai Maa Kangra Rani"]);
-    },2500)
-}
-GetUser("Ashish",function(detail){
-     console.log("User:", detail.username);
+// function GetUser(username,func){
+//     console.log("Fetching User's details....")
+//     setTimeout(()=>{
+//         func({id:1145,username});
+//     },1500);
+// }
+// function GetUserPosts(id,func2){
+//     setTimeout(()=>{
+//         func2(["Jai Maa Naina Devi","Jai Maa Chintpurni","Jai Maa Jawala Devui","Jai Maa Kangra Rani"]);
+//     },2500)
+// }
+// GetUser("Ashish",function(detail){
+//      console.log("User:", detail.username);
 
-    GetUserPosts(detail.id,function(posts){
-        console.log("Posts: "+posts);
+//     GetUserPosts(detail.id,function(posts){
+//         console.log("Posts: "+posts);
+//     });
+// });
+
+
+
+//  Exercise :- 3
+
+function loginUser(func){
+    console.log("Login User Details.....");
+   setTimeout(()=>{
+        func({userid:1253,username:"the_ashish_chandel",follower:"120k"});
+   },1000);
+}
+function fetchPermissions(id,func2){
+    
+    console.log("Fetching Permissions.....");
+    setTimeout(()=>{
+    console.log("Allow Permissions of userid: ",id);
+    
+        func2(["Show all posts","Show all detials","Allow limited access"]);
+    },1000)
+}
+function loadDashboard(per,func3){
+    console.log("Loading Dashboard.....");
+    setTimeout(() => {
+        func3("Dashboard loaded");
+    },1000);
+}
+
+loginUser(function(dets){
+    console.log(dets);
+    fetchPermissions(dets.userid,function(permission){
+        console.log(permission);
+            loadDashboard(permission,function(msg){
+                console.log(msg);
+            });
     });
 });
