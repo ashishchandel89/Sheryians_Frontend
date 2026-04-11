@@ -9,7 +9,9 @@ html,body{
     font-family:aeonik;
 }
 :root{
-        --green: black;
+        --black: black;
+        --green: rgb(72, 132, 59);
+        --grey:rgba(245, 235, 235, 0.405)
 }
  @font-face {
         font-family: aeonik;
@@ -30,7 +32,7 @@ html,body{
          width: 300px;
         height: 300px;
         border-radius: 2rem;
-        box-shadow: 0.2rem 0.2rem 1rem rgb(72, 132, 59);
+        box-shadow: 0.2rem 0.2rem 1rem var(--green);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,8 +40,8 @@ html,body{
         
          img{
                @include img();
-               background-color:  rgba(245, 235, 235, 0.405);
-                box-shadow: 0.1rem 0.3rem 1rem rgb(104, 248, 72);
+               background-color: var(--grey);
+                box-shadow: 0.1rem 0.3rem 1rem var(--green);
             }
     }
     @mixin img(){
@@ -51,34 +53,34 @@ html,body{
                 
     }
     @mixin hover(){
-                    scale:0.96;
+            scale:0.96;
             transition: all ease 0.8s;
             background-position: center;
             background-size: cover; 
             overflow: hidden;
-             border-radius: 4rem;
-              box-shadow: 0.2rem 0.2rem 1rem rgb(72, 132, 59);
+            border-radius: 4rem;
+            box-shadow: 0.2rem 0.2rem 1rem var(--green);
             cursor: pointer;
             img{
                @include img();
-                background-color: rgba(202, 199, 199, 0.405);
+                background-color:var(--grey);
             }
     }
 
 main{
     width: 100%;
-    background-color: var(--green);
-    display: flex;
-    align-items: flex-end;
-     flex-direction: column;
-    padding: 2rem;
-     
+    height: 100%;
+    background-color: var(--black);
+   
         section.allElem{
             width: 100%;  
+            height:100%;
             display: flex;
+            padding-top: 40px;
             justify-content: space-evenly;
             gap:1rem;
-
+            overflow: auto;
+            position: absolute;
             .elem{
            @include desgin();
             background-color: #82a96b00;
@@ -90,16 +92,18 @@ main{
             }
         }
         .fullElem{
-            height: 100vh;
-            width: 100%;
-            padding: 40px;
-            display: block;
-            position: static;
-            top: 0;
-            z-index: 999;
+            height: 100%;
+            width:100%;
+            background-color: var(--black);
+            padding: 2.5rem;
+            display: none;
+            position: relative;
             h1{
-            color:white;
-            font-size: 3rem;
+                color: white;
+                font-size: 3rem;
+                font-weight: 200;
             }
         }
+       
+    
     }

@@ -23,4 +23,7 @@ allElem.forEach(function(elem,index){
         elem.style.backgroundImage="";
        }
     })
+    elem.addEventListener('click',function(){
+        allFullElem[elem.id].style.display='block';
+    })
 })

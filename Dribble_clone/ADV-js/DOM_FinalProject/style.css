@@ -11,7 +11,9 @@ html, body {
 }
 
 :root {
-  --green: black;
+  --black: black;
+  --green: rgb(72, 132, 59);
+  --grey:rgba(245, 235, 235, 0.405) ;
 }
 
 @font-face {
@@ -31,23 +33,24 @@ html, body {
 }
 main {
   width: 100%;
-  background-color: var(--green);
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  padding: 2rem;
+  height: 100%;
+  background-color: var(--black);
 }
 main section.allElem {
   width: 100%;
+  height: 100%;
   display: flex;
+  padding-top: 40px;
   justify-content: space-evenly;
   gap: 1rem;
+  overflow: auto;
+  position: absolute;
 }
 main section.allElem .elem {
   width: 300px;
   height: 300px;
   border-radius: 2rem;
-  box-shadow: 0.2rem 0.2rem 1rem rgb(72, 132, 59);
+  box-shadow: 0.2rem 0.2rem 1rem var(--green);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,8 +62,8 @@ main section.allElem .elem img {
   border-radius: 50%;
   padding: 0.8rem;
   box-shadow: 0.2rem 0.6rem 1rem rgb(26, 26, 26);
-  background-color: rgba(245, 235, 235, 0.405);
-  box-shadow: 0.1rem 0.3rem 1rem rgb(104, 248, 72);
+  background-color: var(--grey);
+  box-shadow: 0.1rem 0.3rem 1rem var(--green);
 }
 main section.allElem .elem {
   background-color: rgba(130, 169, 107, 0);
@@ -73,7 +76,7 @@ main section.allElem .elem:hover {
   background-size: cover;
   overflow: hidden;
   border-radius: 4rem;
-  box-shadow: 0.2rem 0.2rem 1rem rgb(72, 132, 59);
+  box-shadow: 0.2rem 0.2rem 1rem var(--green);
   cursor: pointer;
 }
 main section.allElem .elem:hover img {
@@ -82,21 +85,21 @@ main section.allElem .elem:hover img {
   border-radius: 50%;
   padding: 0.8rem;
   box-shadow: 0.2rem 0.6rem 1rem rgb(26, 26, 26);
-  background-color: rgba(202, 199, 199, 0.405);
+  background-color: var(--grey);
 }
 main section.allElem .elem:hover {
   background-image: url("https://media3.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZjF4cDFpemx6ZW92cnJleTFza2d3NHgxZ283b295cHRxc3dzZXgzNCZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/IGL5GFRvVTtK8O9l7h/giphy.webp");
 }
 main .fullElem {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  padding: 40px;
-  display: block;
-  position: static;
-  top: 0;
-  z-index: 999;
+  background-color: var(--black);
+  padding: 2.5rem;
+  display: none;
+  position: relative;
 }
 main .fullElem h1 {
   color: white;
   font-size: 3rem;
+  font-weight: 200;
 }/*# sourceMappingURL=style.css.map */
