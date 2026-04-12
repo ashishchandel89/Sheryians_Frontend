@@ -12,7 +12,7 @@ html,body{
         --black: black;
         --green: rgb(72, 132, 59);
         --grey: rgba(245, 235, 235, 0.405);
-        --red: red;
+        --red: rgba(255, 0, 0, 0.74);
         --white:white;
         --lightgrey:#d6d5d417;
         --bluryYellow: rgba(255, 174, 0, 0.34);
@@ -239,6 +239,21 @@ main{
                         font-size: 1.5rem;
                         color:var(--white);
                         font-weight: 500;
+                        align-items: center;
+                        span{
+                            margin-left: 0.5rem;
+                            background-color: var(--red);
+                            font-size: 0.69rem;
+                            font-weight: 700;
+                            padding:0.2rem 0.3rem;
+                            border-radius: 0.2rem;
+                        }
+                        span.true{
+                            opacity: 1;
+                        }
+                        span.false{
+                            opacity: 0;
+                        }
                     }
                     button{
                         padding: 0.5rem 0.8rem;

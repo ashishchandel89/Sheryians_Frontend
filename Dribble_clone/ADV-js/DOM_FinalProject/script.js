@@ -41,10 +41,12 @@ openFeatures();
 
 
 function todoList(){
+    let allTask=document.querySelector('.allTask')
     let form=document.querySelector('.addTask form');
 let taskInput=document.querySelector('.addTask form input');
 let taskDetails=document.querySelector('.addTask form textarea');
-let allTask=[
+let sum='';
+let currentTask=[
     {
         task: "Apptitude Question",
         details: "Solving these Questions upto 13 April",
@@ -53,7 +55,7 @@ let allTask=[
     {
         task: "DSA Question",
         details: "Solving these Questions upto 14 April",
-        imp:true
+        imp:false
     },
     {
         task: "College Assignments",
@@ -67,9 +69,12 @@ form.addEventListener('submit',function(e){
     console.log("Add Details of Task: ",taskDetails.value);    
 })
 
-allTask.forEach(function(){
-    console.log(allTask)
+currentTask.forEach(function(elem){
+     sum+=`<div class="task">
+        <h5>${elem.task} <span class="${elem.imp}">imp !</span></h5>
+        <button>Mark as Completed</button>  
+    </div>`;
 })
-
+allTask.innerHTML=sum;
 }
 todoList();
