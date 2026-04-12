@@ -1,5 +1,8 @@
+function openFeatures(){
 let allElem = document.querySelectorAll('.elem');
-let allFullElem=document.querySelectorAll('.fullElem');
+let allFullElemPage=document.querySelectorAll('.fullElem');
+let fullElemPageBackButton=document.querySelectorAll('.fullElem .back');
+
 let obj={
     img1:"https://media3.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZjF4cDFpemx6ZW92cnJleTFza2d3NHgxZ283b295cHRxc3dzZXgzNCZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/IGL5GFRvVTtK8O9l7h/giphy.webp",
     img2:"https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHdoNHltMmd4dmo2bW41MzBkNzVtYzBoOHlnd3o1ZWJoZng1NzRqMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iBlgTxSS20NLdCxvDW/giphy.webp",
@@ -17,13 +20,56 @@ allElem.forEach(function(elem,index){
     elem.addEventListener('mouseenter',function(){
         elem.style.backgroundImage=`url(${images[index]})`;
         elem.style.backgroundSize="cover";
-    })
+    });
      elem.addEventListener('mouseleave',function(){
        if(index!==2){
         elem.style.backgroundImage="";
        }
-    })
+    });
     elem.addEventListener('click',function(){
-        allFullElem[elem.id].style.display='block';
-    })
+        allFullElemPage[elem.id].style.display='block';
+    });
+});
+fullElemPageBackButton.forEach(function(back){
+    back.addEventListener('click',function(){
+       allFullElemPage[back.id].style.display='none';
+    }); 
+});
+
+}
+openFeatures();
+
+
+function todoList(){
+    let form=document.querySelector('.addTask form');
+let taskInput=document.querySelector('.addTask form input');
+let taskDetails=document.querySelector('.addTask form textarea');
+let allTask=[
+    {
+        task: "Apptitude Question",
+        details: "Solving these Questions upto 13 April",
+        imp:true
+    },
+    {
+        task: "DSA Question",
+        details: "Solving these Questions upto 14 April",
+        imp:true
+    },
+    {
+        task: "College Assignments",
+        details: "Solving these Questions upto 18 April",
+        imp:true
+    }
+]
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    console.log("Add Task: ",taskInput.value);
+    console.log("Add Details of Task: ",taskDetails.value);    
 })
+
+allTask.forEach(function(){
+    console.log(allTask)
+})
+
+}
+todoList();
